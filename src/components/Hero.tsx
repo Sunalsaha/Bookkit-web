@@ -98,9 +98,7 @@ const Hero = () => {
             height: 120px;
             margin: 0 auto 1.5rem;
             display: block;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.8))
-                    drop-shadow(0 5px 15px rgba(226, 55, 68, 0.6))
-                    drop-shadow(0 0 40px rgba(255, 255, 255, 0.3));
+            
             animation: logoFloat 3s ease-in-out infinite, fadeInScale 1.2s ease-out;
           }
 
@@ -120,7 +118,7 @@ const Hero = () => {
             color: #ffffff;
             margin-bottom: 1.25rem;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9),
-                         0 0 20px rgba(226, 55, 68, 0.5);
+                         
             animation: slideInLeft 1s ease-out 0.3s both;
           }
 
@@ -169,7 +167,7 @@ const Hero = () => {
           }
 
           .playstore-badge:hover img {
-            filter: drop-shadow(0 15px 35px rgba(226, 55, 68, 0.6))
+            filter: drop-shadow(0 15px 35px rgba(23, 22, 23, 0.6))
                     drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
           }
 
@@ -198,8 +196,8 @@ const Hero = () => {
           }
 
           @keyframes glow {
-            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e23744; }
-            100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e23744, 0 0 40px #e23744; }
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ebe2e3ff; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffffff, 0 0 40px #c0b9baff; }
           }
 
           /* Floating particles */
