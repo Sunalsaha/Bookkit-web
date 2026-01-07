@@ -261,7 +261,7 @@ const Offerings: React.FC = () => {
       opacity: 0,
       pointerEvents: 'none',
       willChange: 'transform, opacity',
-      border: '1px solid rgba(148, 163, 184, 0.9)',
+      border: '4px solid rgba(148, 163, 184, 0.9)',
       boxShadow:
         '0 24px 60px rgba(15,23,42,0.9), 0 0 0 1px rgba(148,163,184,0.4), inset 0 0 0 1px rgba(255,255,255,0.06)',
       backgroundImage:
