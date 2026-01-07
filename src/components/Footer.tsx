@@ -22,6 +22,46 @@ const Footer: React.FC = () => {
       margin: 0 0 48px 0;
       letter-spacing: -2px;
       color: #ffffff;
+      cursor: pointer;
+      background: linear-gradient(45deg, #ffffff, #ffffff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 200%;
+      transition: all 0.6s ease;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-brand h2:hover {
+      background: linear-gradient(
+        45deg,
+        #ff6b6b,
+        #4ecdc4,
+        #45b7d1,
+        #f7b731,
+        #5f27cd,
+        #00d2d3
+      );
+      background-size: 300% 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 3s ease infinite;
+      transform: scale(1.05);
+      letter-spacing: -1px;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .footer-grid {
@@ -75,19 +115,56 @@ const Footer: React.FC = () => {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-color 0.2s ease;
+      transition: all 0.3s ease;
       text-decoration: none;
       color: #ffffff;
       cursor: pointer;
-    }
-
-    .social-btn:hover {
-      background-color: #2d2d2d;
+      transform: scale(1);
     }
 
     .social-btn svg {
       width: 18px;
       height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    /* LinkedIn - Official Blue #0077B5 */
+    .social-btn.linkedin:hover {
+      background-color: #0077B5;
+      transform: scale(1.15) translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
+    }
+
+    /* Instagram - Gradient from official colors */
+    .social-btn.instagram:hover {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      transform: scale(1.15) translateY(-3px);
+      box-shadow: 0 8px 20px rgba(225, 48, 108, 0.4);
+    }
+
+    /* YouTube - Official Red #FF0000 */
+    .social-btn.youtube:hover {
+      background-color: #FF0000;
+      transform: scale(1.15) translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+    }
+
+    /* Facebook - Official Blue #1877F2 */
+    .social-btn.facebook:hover {
+      background-color: #1877F2;
+      transform: scale(1.15) translateY(-3px);
+      box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+    }
+
+    /* Twitter/X - Official Blue #1DA1F2 */
+    .social-btn.twitter:hover {
+      background-color: #000000ff;
+      transform: scale(1.15) translateY(-3px);
+      box-shadow: 0 8px 20px rgba(139, 139, 139, 0.4);
+    }
+
+    .social-btn:hover svg {
+      transform: rotate(360deg);
     }
 
     .footer-divider {
@@ -202,56 +279,56 @@ const Footer: React.FC = () => {
               <div className="social-icons">
                 <a 
                   href="https://linkedin.com" 
-                  className="social-btn" 
+                  className="social-btn linkedin" 
                   aria-label="LinkedIn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </a>
                 <a 
                   href="https://instagram.com" 
-                  className="social-btn" 
+                  className="social-btn instagram" 
                   aria-label="Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
                 <a 
                   href="https://youtube.com" 
-                  className="social-btn" 
+                  className="social-btn youtube" 
                   aria-label="YouTube"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                     <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                   </svg>
                 </a>
                 <a 
                   href="https://facebook.com" 
-                  className="social-btn" 
+                  className="social-btn facebook" 
                   aria-label="Facebook"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
                   </svg>
                 </a>
                 <a 
                   href="https://twitter.com" 
-                  className="social-btn" 
+                  className="social-btn twitter" 
                   aria-label="Twitter"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
                 </a>

@@ -98,7 +98,6 @@ const Hero = () => {
             height: 120px;
             margin: 0 auto 1.5rem;
             display: block;
-            
             animation: logoFloat 3s ease-in-out infinite, fadeInScale 1.2s ease-out;
           }
 
@@ -117,8 +116,7 @@ const Hero = () => {
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 1.25rem;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9),
-                         
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
             animation: slideInLeft 1s ease-out 0.3s both;
           }
 
@@ -200,55 +198,6 @@ const Hero = () => {
             100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffffff, 0 0 40px #c0b9baff; }
           }
 
-          /* Floating particles */
-          .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            pointer-events: none;
-          }
-
-          .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(226, 55, 68, 0.6);
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(226, 55, 68, 0.8);
-          }
-
-          .particle:nth-child(1) { left: 10%; animation: float 6s ease-in-out infinite; }
-          .particle:nth-child(2) { left: 20%; animation: float 8s ease-in-out infinite 1s; }
-          .particle:nth-child(3) { left: 30%; animation: float 7s ease-in-out infinite 2s; }
-          .particle:nth-child(4) { left: 40%; animation: float 9s ease-in-out infinite 1.5s; }
-          .particle:nth-child(5) { left: 50%; animation: float 6.5s ease-in-out infinite 0.5s; }
-          .particle:nth-child(6) { left: 60%; animation: float 8.5s ease-in-out infinite 2.5s; }
-          .particle:nth-child(7) { left: 70%; animation: float 7.5s ease-in-out infinite 1s; }
-          .particle:nth-child(8) { left: 80%; animation: float 9.5s ease-in-out infinite 3s; }
-          .particle:nth-child(9) { left: 90%; animation: float 6s ease-in-out infinite 0.8s; }
-
-          @keyframes float {
-            0%, 100% { 
-              transform: translateY(100vh) scale(0);
-              opacity: 0;
-            }
-            10% {
-              opacity: 1;
-              transform: translateY(90vh) scale(1);
-            }
-            90% {
-              opacity: 1;
-              transform: translateY(10vh) scale(1);
-            }
-            100% {
-              opacity: 0;
-              transform: translateY(0) scale(0);
-            }
-          }
-
           /* ===== RESPONSIVE HERO ===== */
           @media (max-width: 639px) {
             .hero-logo { 
@@ -299,19 +248,6 @@ const Hero = () => {
         />
 
         <div className="video-overlay"></div>
-
-        {/* Floating Particles */}
-        <div className="particles">
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-        </div>
 
         <div className="hero-content">
           <img src={logoImg} alt="BookKit Logo" className="hero-logo" />
