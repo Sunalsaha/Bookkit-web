@@ -18,38 +18,38 @@ const Offerings: React.FC = () => {
   const isLockedRef = useRef<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
-  const cardData: CardData[] = [
-    { 
-      icon: <DollarSign size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
-      title: 'Sell Your Old Books', 
-      desc: 'Turn your unused books into cash with just a few taps' 
-    },
-    { 
-      icon: <BookOpen size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
-      title: 'Buy Used Books', 
-      desc: 'Discover quality pre-loved books at affordable prices' 
-    },
-    { 
-      icon: <RefreshCw size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
-      title: 'All-in-One Platform', 
-      desc: 'Buy, sell, and donate books seamlessly in a single app' 
-    },
-    { 
-      icon: <Heart size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
-      title: 'Donate Books', 
-      desc: 'Give back to the community by donating books to those in need' 
-    },
-    { 
-      icon: <Sprout size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
-      title: 'Sustainable Reading', 
-      desc: 'Help the environment by giving books a second life' 
-    },
-    { 
-      icon: <Users size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
-      title: 'Connect Locally', 
-      desc: 'Meet fellow book lovers and exchange books in your area' 
-    },
-  ];
+ const cardData: CardData[] = [
+  { 
+    icon: <DollarSign size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
+    title: 'Sell Your Books Easily', 
+    desc: 'List your old books in minutes and earn money from books you no longer use.' 
+  },
+  { 
+    icon: <BookOpen size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
+    title: 'Buy Affordable Books', 
+    desc: 'Find quality used books at budget-friendly prices from verified sellers.' 
+  },
+  { 
+    icon: <RefreshCw size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
+    title: 'One Platform, Many Options', 
+    desc: 'Buy, sell, or donate books effortlessly—all within the BookKit app.' 
+  },
+  { 
+    icon: <Heart size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
+    title: 'Donate & Make an Impact', 
+    desc: 'Share knowledge by donating books to students and communities in need.' 
+  },
+  { 
+    icon: <Sprout size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
+    title: 'Read Sustainably', 
+    desc: 'Reduce waste and support eco-friendly reading by reusing books.' 
+  },
+  { 
+    icon: <Users size={isMobile ? 64 : 72} strokeWidth={1.5} />, 
+    title: 'Local Book Community', 
+    desc: 'Connect with nearby readers to exchange, buy, or donate books locally.' 
+  },
+];
 
   // Mobile detection
   useEffect(() => {
